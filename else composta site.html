@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cidadania</title>
+</head>
+<style>
+body {
+background-color: pink;
+color:black;
+font: normal 15px;
+}
+
+input#txtp {
+    width: 250px;
+    height: auto;
+    color: white;
+    font: normal 15px;
+    background-color: palevioletred;
+    text-align: center;
+    border-radius: 2px;
+    border: none;
+}
+
+[value= "Verificar"] {
+    width: 150px;
+    height: 150;
+    color: white;
+      font: normal 15px;
+      background-color:palevioletred;
+      text-align: center;
+      border-radius: 2px;
+      border: none;
+      margin-top: 10px;
+}
+div {
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+#corpo {
+    width: 1000px;
+    height: auto;
+    margin: 0 auto;
+
+}
+    
+</style>
+
+
+
+<body>
+<div id="corpo">
+
+    <h1>Sua Nacionalidade</h1>
+
+
+   Qual país você pertence ?
+     <input type="text" name="country" id="country">
+    <input type="button" value="Pesquisar" onclick="clicar()">
+<div id="res">
+
+</div>
+
+<script>
+
+        function clicar(){
+        
+let country = document.querySelector('input#country')
+let res = document.querySelector('div#res');
+let nas = String(country.value).toLowerCase()
+
+res.innerHTML = `<p> Seu pais de origem é: ${nas}</p>`
+    if(nas =="brasil"){
+        res.innerHTML += `<p>Você é Brasileiro</p>`
+    }  else {
+        res.innerHTML += `<p>Você é Estrangeiro!</p>`}
+        
+      
+    
+        
+    }
+
+
+
+
+
+
+</script>
+ 
+</body>
+</html>
